@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerClip Pro + Gecko-Grip Pro | Kickstarter</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060608;--surf:#0c0c10;--card:#111116;--border:rgba(255,255,255,0.04);--text:#eeeef2;--body:rgba(255,255,255,0.55);--dim:rgba(255,255,255,0.3);--gold:#f5a623;--gold-g:linear-gradient(135deg,#f5a623,#e67e22);--gecko:#3ee68a;--gecko-g:linear-gradient(135deg,#3ee68a,#059669);--blue:#4a9eff;--rose:#ff4d6a;--cyan:#22d3ee;--octo:#ff6b35;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.72;-webkit-font-smoothing:antialiased;}
+.container{max-width:900px;margin:0 auto;padding:0 28px;}.serif{font-family:'Instrument Serif',Georgia,serif;}.mono{font-family:'JetBrains Mono',monospace;}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}.reveal.vis{opacity:1;transform:translateY(0);}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}.reveal.d4{transition-delay:.4s}.reveal.d5{transition-delay:.5s}
+body::before{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.015'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(6,6,8,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:52px;}
+.topbar-brand{font-family:'Instrument Serif',serif;font-size:16px;}.topbar-brand .g1{color:var(--gold);}.topbar-brand .g2{color:var(--gecko);}
+.topbar-cta{padding:8px 20px;background:var(--gold-g);color:#000;font-size:11px;font-weight:700;border:none;border-radius:8px;cursor:pointer;letter-spacing:.5px;transition:transform .2s,box-shadow .2s;}.topbar-cta:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(245,166,35,.3);}
+.topbar-progress{position:absolute;bottom:0;left:0;height:2px;background:var(--gold-g);transition:width 1s cubic-bezier(.16,1,.3,1);}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 28px 60px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:140%;height:80%;background:radial-gradient(ellipse,rgba(62,230,138,.05),transparent 55%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(transparent,var(--bg));pointer-events:none;}
+.hero-ey{font-size:11px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gecko);opacity:0;animation:fu .8s .3s forwards;}
+.hero h1{font-family:'Instrument Serif',serif;font-size:clamp(42px,8vw,82px);font-weight:400;line-height:1.02;margin:20px 0 28px;opacity:0;animation:fu .8s .5s forwards;}
+.hero h1 em{font-style:italic;color:var(--gecko);}
+.hero-sub{font-size:clamp(16px,2.2vw,20px);color:var(--body);max-width:620px;font-weight:300;opacity:0;animation:fu .8s .7s forwards;}
+.hero-nums{display:flex;gap:36px;margin-top:48px;opacity:0;animation:fu .8s .9s forwards;flex-wrap:wrap;justify-content:center;}
+.hn-v{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:500;background:var(--gold-g);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hn-v.gr{background:var(--gecko-g);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hn-l{font-size:9px;color:var(--dim);letter-spacing:2.5px;text-transform:uppercase;margin-top:4px;}
+@keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+section{padding:100px 0;}
+.sep{height:1px;background:var(--border);margin:0 28px;}
+.st{font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:14px;}.st.gold{color:var(--gold);}.st.green{color:var(--gecko);}.st.blue{color:var(--blue);}.st.octo{color:var(--octo);}
+h2{font-family:'Instrument Serif',serif;font-size:clamp(30px,5vw,50px);font-weight:400;margin-bottom:20px;line-height:1.1;}h2 em{font-style:italic;}
+h3{font-size:18px;font-weight:600;margin:32px 0 10px;}p{color:var(--body);margin-bottom:16px;}p.lead{font-size:18px;color:var(--text);font-weight:300;}
+.gd{background:var(--card);border:1px solid rgba(62,230,138,.12);border-radius:20px;padding:32px 36px;margin:40px 0;position:relative;overflow:hidden;}
+.gd::before{content:'🦎';position:absolute;right:20px;top:-8px;font-size:48px;opacity:.15;transform:scaleX(-1);}
+.gd::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(62,230,138,.03),transparent 60%);pointer-events:none;}
+.gq{font-family:'Instrument Serif',serif;font-size:clamp(18px,2.8vw,26px);font-style:italic;color:var(--gecko);line-height:1.45;position:relative;z-index:1;}
+.ga{font-size:12px;color:var(--dim);margin-top:12px;position:relative;z-index:1;}
+.embed-3d{width:100%;aspect-ratio:16/10;border-radius:20px;border:1px solid var(--border);overflow:hidden;background:#0a0a0c;margin:40px 0;box-shadow:0 20px 80px rgba(0,0,0,.5);}
+.embed-3d iframe{width:100%;height:100%;border:none;}
+.ec{text-align:center;font-size:11px;color:var(--dim);margin-top:-28px;margin-bottom:40px;}.ec span{background:var(--bg);padding:0 12px;position:relative;z-index:1;}
+.ug{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:36px 0;}
+.uc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 24px;transition:all .3s;position:relative;overflow:hidden;}
+.uc:hover{border-color:rgba(245,166,35,.15);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.3);}
+.uc.gk:hover{border-color:rgba(62,230,138,.15);}.ui{font-size:32px;margin-bottom:14px;display:block;}.ut{font-size:14px;font-weight:600;margin-bottom:6px;}.ud{font-size:12px;color:var(--body);line-height:1.65;}
+.ev{position:relative;width:100%;max-width:700px;margin:48px auto;min-height:420px;}
+.el{position:relative;width:280px;margin:0 auto 12px;text-align:center;padding:16px 20px;background:var(--card);border:1px solid var(--border);border-radius:14px;opacity:0;transform:translateX(-30px);transition:all .5s cubic-bezier(.16,1,.3,1);}
+.el.vis{opacity:1;transform:translateX(0);}.el:nth-child(2){transition-delay:.12s;}.el:nth-child(3){transition-delay:.24s;}.el:nth-child(4){transition-delay:.36s;}.el:nth-child(5){transition-delay:.48s;}
+.en{font-size:13px;font-weight:600;}.es{font-size:10px;color:var(--dim);margin-top:3px;}
+.ed{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px;}
+.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:32px 0;}
+.sc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 16px;text-align:center;transition:all .3s;}.sc:hover{transform:translateY(-2px);border-color:rgba(62,230,138,.15);}
+.se{font-size:28px;margin-bottom:8px;display:block;}.sn{font-size:12px;font-weight:600;margin-bottom:4px;}
+.sh{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:500;color:var(--gecko);}
+.sb{height:4px;background:rgba(255,255,255,.06);border-radius:2px;margin-top:8px;overflow:hidden;}
+.sf{height:100%;background:var(--gecko-g);border-radius:2px;transition:width 1s .2s cubic-bezier(.16,1,.3,1);}
+.so{font-size:10px;color:var(--rose);margin-top:6px;}
+/* ── Octobuddy Killer Section ── */
+.ob-section{background:var(--surf);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:100px 0;}
+.vs-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:0;margin:48px 0;align-items:start;}
+.vs-col{border-radius:20px;padding:32px 28px;}
+.vs-col.them{background:rgba(255,107,53,.04);border:1px solid rgba(255,107,53,.15);}
+.vs-col.us{background:rgba(62,230,138,.04);border:1px solid rgba(62,230,138,.2);}
+.vs-center{display:flex;align-items:center;justify-content:center;padding:0 16px;padding-top:80px;}
+.vs-badge{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:2px;padding:6px 14px;border-radius:6px;}
+.vs-badge.octo-badge{background:rgba(255,107,53,.1);color:var(--octo);}
+.vs-badge.gecko-badge{background:rgba(62,230,138,.1);color:var(--gecko);}
+.vs-head{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;}
+.vs-head.them{color:var(--octo);}.vs-head.us{color:var(--gecko);}
+.vs-product{font-family:'Instrument Serif',serif;font-size:22px;margin-bottom:4px;}
+.vs-price{font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:500;color:var(--dim);margin-bottom:20px;}
+.vs-row{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:13px;}
+.vs-row:last-child{border:none;}
+.vs-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
+.vs-text{color:var(--body);line-height:1.5;}
+.vs-text strong{color:var(--text);font-weight:600;}
+.vs-text.fail{color:rgba(255,107,53,.7);}
+.vs-text.win{color:rgba(62,230,138,.85);}
+.killer-banner{text-align:center;padding:48px 28px;background:linear-gradient(135deg,rgba(62,230,138,.06),rgba(62,230,138,.02));border:1px solid rgba(62,230,138,.15);border-radius:20px;margin:48px 0;}
+.killer-banner h3{font-family:'Instrument Serif',serif;font-size:clamp(22px,3.5vw,36px);font-weight:400;margin-bottom:12px;line-height:1.2;}
+.killer-banner h3 em{color:var(--gecko);font-style:italic;}
+.killer-banner p{font-size:14px;color:var(--body);max-width:500px;margin:0 auto;}
+/* ── existing tier styles ── */
+.ts{background:var(--surf);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:100px 0;}
+.tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:36px 0;}
+.ti{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px 22px;position:relative;overflow:hidden;transition:all .3s;}
+.ti:hover{transform:translateY(-3px);box-shadow:0 12px 48px rgba(0,0,0,.3);}
+.ti.hot{border-color:var(--gold);box-shadow:0 0 60px rgba(245,166,35,.06);}
+.ti.hot::before{content:'MOST POPULAR';position:absolute;top:0;right:0;background:var(--gold-g);color:#000;font-size:8px;font-weight:800;letter-spacing:1.5px;padding:5px 14px;border-radius:0 18px 0 10px;}
+.ti.gt{border-color:rgba(62,230,138,.2);}.ti.gt.hot{border-color:var(--gecko);box-shadow:0 0 60px rgba(62,230,138,.06);}.ti.gt.hot::before{background:var(--gecko-g);}
+.ti.founder{border-color:var(--gold);box-shadow:0 0 80px rgba(245,166,35,.1);}
+.ti.founder::before{content:'FOUNDER — 50 UNITS';position:absolute;top:0;right:0;background:var(--gold-g);color:#000;font-size:8px;font-weight:800;letter-spacing:1.5px;padding:5px 14px;border-radius:0 18px 0 10px;}
+.tt{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:6px;}
+.tn{font-size:15px;font-weight:600;margin-bottom:2px;}
+.tp{font-family:'JetBrains Mono',monospace;font-size:34px;font-weight:500;margin:8px 0 2px;}.tp .go{color:var(--gold);}.tp .ge{color:var(--gecko);}
+.tw{font-size:11px;color:var(--dim);text-decoration:line-through;}.td{font-size:12px;color:var(--body);margin:12px 0;line-height:1.6;}
+.tm{font-size:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.03);color:var(--body);}.tm:last-child{border:none;}.tm::before{content:'✓ ';color:var(--gecko);font-weight:700;}
+.tv{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gecko);font-weight:600;margin-top:14px;padding:8px 12px;background:rgba(62,230,138,.06);border-radius:8px;text-align:center;}
+.fq{border-bottom:1px solid var(--border);padding:22px 0;cursor:pointer;}
+.fqq{font-size:15px;font-weight:600;display:flex;justify-content:space-between;align-items:center;}
+.fqq::after{content:'+';font-size:20px;color:var(--dim);transition:transform .3s;}.fq.open .fqq::after{transform:rotate(45deg);color:var(--gold);}
+.fqa{font-size:13px;color:var(--body);line-height:1.75;max-height:0;overflow:hidden;transition:max-height .4s,padding .4s;}.fq.open .fqa{max-height:400px;padding-top:12px;}
+.sp{background:var(--card);border:1px solid rgba(62,230,138,.08);border-radius:18px;padding:32px;margin:20px 0;position:relative;overflow:hidden;}
+.sp::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gecko-g);}
+.sph{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+.spn{width:36px;height:36px;background:rgba(62,230,138,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:var(--gecko);}
+.spt{font-size:16px;font-weight:600;}.sptg{font-size:9px;color:var(--gecko);letter-spacing:1.5px;text-transform:uppercase;}
+.spb{font-size:13px;color:var(--body);line-height:1.85;padding-left:18px;border-left:2px solid rgba(62,230,138,.1);}
+.dir{font-style:italic;color:var(--dim);display:block;margin:10px 0;}.gv{color:var(--gecko);font-weight:500;}.dlg{color:var(--text);font-weight:500;}
+.str{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);}
+.stra{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:var(--gold);min-width:80px;}
+.strb{flex:1;height:6px;background:rgba(255,255,255,.04);border-radius:3px;overflow:hidden;}
+.strf{height:100%;border-radius:3px;background:var(--gold-g);transition:width 1.5s cubic-bezier(.16,1,.3,1);}
+.strl{font-size:12px;color:var(--body);min-width:200px;}
+.cs{text-align:center;padding:120px 28px;position:relative;}
+.cs::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:160%;height:100%;background:radial-gradient(ellipse,rgba(62,230,138,.05),transparent 55%);pointer-events:none;}
+.cb{display:inline-block;padding:16px 48px;border-radius:12px;font-size:15px;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:all .2s;letter-spacing:.3px;}
+.cb1{background:var(--gold-g);color:#000;}.cb1:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(245,166,35,.3);}
+.cb2{background:var(--gecko-g);color:#000;margin-left:12px;}.cb2:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(62,230,138,.3);}
+.cb3{background:transparent;border:1px solid var(--border);color:var(--text);padding:14px 36px;font-size:13px;margin-top:16px;display:inline-block;border-radius:10px;cursor:pointer;transition:all .2s;}.cb3:hover{border-color:var(--gecko);color:var(--gecko);}
+footer{padding:48px 28px;text-align:center;font-size:11px;color:var(--dim);border-top:1px solid var(--border);}
+@media(max-width:640px){.hero h1{font-size:36px;}.hero-nums{gap:20px;}.embed-3d{aspect-ratio:4/3;}.ug,.sg,.tg{grid-template-columns:1fr;}.cb2{margin:12px 0 0;}.gd{padding:24px;}.sp{padding:24px;}.vs-grid{grid-template-columns:1fr;gap:16px;}.vs-center{display:none;}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-brand"><span class="g1">PowerClip</span> + <span class="g2">Gecko-Grip</span></div><button class="topbar-cta" onclick="document.getElementById('tiers').scrollIntoView({behavior:'smooth'})">Back This Project →</button><div class="topbar-progress" id="pb" style="width:0%"></div></div>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+  <div class="hero-ey">The surface-agnostic phone mount. Designed in Denver, CO.</div>
+  <h1>Suction cups failed.<br>Glue left residue.<br><em>Gecko-Grip stuck.</em></h1>
+  <p class="hero-sub">504,000 biomimetic microfibers. 8 surface types. Zero adhesive. Zero residue. The only phone mount that works everywhere your suction cup doesn't.</p>
+  <div class="hero-nums">
+    <div><div class="hn-v gr">8</div><div class="hn-l">Surface Types</div></div>
+    <div><div class="hn-v gr">504K</div><div class="hn-l">Microfibers</div></div>
+    <div><div class="hn-v">22 lbs</div><div class="hn-l">Glass Hold</div></div>
+    <div><div class="hn-v gr">Zero</div><div class="hn-l">Residue</div></div>
+    <div><div class="hn-v">$29</div><div class="hn-l">Early Bird</div></div>
+  </div>
+</div>
+
+<!-- ═══ GARY OPENER ═══ -->
+<section><div class="container">
+  <div class="gd reveal">
+    <div class="gq">"Your suction cup works on mirrors and windows. Mine works on the ceiling. I'd say we're not really in the same category — but that would require you to have a category."</div>
+    <div class="ga">— Gary, responding to Octobuddy's marketing team</div>
+  </div>
+</div></section>
+
+<!-- ═══ OCTOBUDDY KILLER ═══ -->
+<div class="ob-section">
+<div class="container">
+  <div class="st octo reveal">THE UPGRADE YOU'VE BEEN WAITING FOR</div>
+  <h2 class="reveal d1">Octobuddy was a <em>good start.</em><br>Gecko-Grip is the finish.</h2>
+  <p class="lead reveal d2">You already know the concept: stick your phone to a surface, hands-free. The problem was never the idea. The problem was 24 suction cups that only work on glass — and permanent adhesive backing that's committed to your phone forever. We fixed both.</p>
+
+  <div class="vs-grid reveal d3">
+    <!-- THEM -->
+    <div class="vs-col them">
+      <div class="vs-head them">THE INCUMBENT</div>
+      <div class="vs-product">Octobuddy Classic</div>
+      <div class="vs-price">~$19 · 24 suction cups</div>
+      <div class="vs-row"><span class="vs-icon">🪟</span><div class="vs-text"><strong>Smooth surfaces only.</strong> Glass, mirrors, tile. Try a dashboard or painted wall and watch it slide down in real time.</div></div>
+      <div class="vs-row"><span class="vs-icon">🔒</span><div class="vs-text fail"><strong>Permanent adhesive backing.</strong> Peel-and-stick means once it's on your case, it's your case now. Switching phones? New Octobuddy.</div></div>
+      <div class="vs-row"><span class="vs-icon">🚫</span><div class="vs-text fail"><strong>Works on 3 of 8 common surfaces.</strong> Dashboard: fails. Painted wall: fails. Wood: fails. Concrete: not even close.</div></div>
+      <div class="vs-row"><span class="vs-icon">💧</span><div class="vs-text fail"><strong>Suction degrades.</strong> Heat, dust, and time kill the seal. If it slips once, the trust is gone. So is your phone.</div></div>
+      <div class="vs-row"><span class="vs-icon">🔗</span><div class="vs-text fail"><strong>Single-purpose product.</strong> Mount only. No MagSafe. No ring stand. No charging. Just suction cups.</div></div>
+    </div>
+
+    <!-- VS -->
+    <div class="vs-center">
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:center;">
+        <div class="vs-badge octo-badge">OCTOBUDDY</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;color:var(--dim);">vs</div>
+        <div class="vs-badge gecko-badge">GECKO-GRIP</div>
+      </div>
+    </div>
+
+    <!-- US -->
+    <div class="vs-col us">
+      <div class="vs-head us">THE EVOLUTION</div>
+      <div class="vs-product">Gecko-Grip Pro</div>
+      <div class="vs-price">$29 Early Bird · 504,000 microfibers</div>
+      <div class="vs-row"><span class="vs-icon">🌍</span><div class="vs-text win"><strong>8 surface types.</strong> Glass, metal, tile, dashboard, painted wall, textured plastic, wood, and concrete. If you can touch it, we stick to it.</div></div>
+      <div class="vs-row"><span class="vs-icon">🔄</span><div class="vs-text win"><strong>MagSafe detachable.</strong> Snaps on and off any MagSafe-compatible case in one move. Switch phones, swap cases, upgrade anytime. Not permanent.</div></div>
+      <div class="vs-row"><span class="vs-icon">✅</span><div class="vs-text win"><strong>Works on 8 of 8 surfaces.</strong> Van der Waals forces don't care about texture. Biomimetic adhesion works at the molecular level, not the atmospheric level.</div></div>
+      <div class="vs-row"><span class="vs-icon">♻️</span><div class="vs-text win"><strong>Self-cleaning. 80,000+ cycles.</strong> Rinse under water, full grip restored. At 20 mounts/day, that's 10+ years. No degradation, no replacement.</div></div>
+      <div class="vs-row"><span class="vs-icon">⚡</span><div class="vs-text win"><strong>One disc. Full ecosystem.</strong> Pairs with PowerClip Pro for ring stand, 15W MagSafe, USB-C charging, sapphire lens, and retractable leash — all in one case.</div></div>
+    </div>
+  </div>
+
+  <div class="killer-banner reveal">
+    <h3>The Octobuddy costs $19 and sticks to <em>3 surfaces.</em><br>Gecko-Grip Pro costs $29 and sticks to <em>8.</em></h3>
+    <p>For $10 more, you get Van der Waals adhesion, MagSafe detachability, self-cleaning fibers, and 10+ years of service. This isn't a competitor. It's the upgrade.</p>
+  </div>
+
+  <div class="gd reveal">
+    <div class="gq">"They said 24 suction cups was 'revolutionary.' I have 504,000 contact points. Per 65mm disc. I didn't want to say anything but — I'm saying something."</div>
+    <div class="ga">— Gary, who has opinions about suction cup marketing</div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ 3D CONFIGURATOR ═══ -->
+<section><div class="container">
+  <div class="st gold reveal">INTERACTIVE 3D</div>
+  <h2 class="reveal d1">Explore Every <em>Configuration</em></h2>
+  <p class="lead reveal d2">Rotate, zoom, and switch between 7 product tiers. The full PowerClip Pro ecosystem live in your browser.</p>
+  <div class="embed-3d reveal d3"><iframe src="powerclip-multitier.html" loading="lazy" allow="accelerometer" title="PowerClip Pro 3D Configurator"></iframe></div>
+  <div class="ec reveal d4"><span>↕ Drag to rotate · Scroll to zoom · Use <strong>Product Tier</strong> dropdown to switch configs</span></div>
+</div></section>
+
+<!-- ═══ WHERE SUCTION CUPS FAIL ═══ -->
+<section><div class="container">
+  <div class="st green reveal">WHERE SUCTION CUPS FAIL</div>
+  <h2 class="reveal d1">Every surface your Octobuddy <em>can't handle.</em></h2>
+  <p class="lead reveal d2">Suction requires a sealed, smooth, non-porous surface and atmospheric pressure differential. The real world has very few of those. Van der Waals adhesion has no such requirements.</p>
+  <div class="ug">
+    <div class="uc gk reveal">
+      <span class="ui">🚗</span>
+      <div class="ut">Car Dashboard</div>
+      <div class="ud">Textured vinyl. Suction cups lose seal within minutes — especially in heat. Gecko-Grip holds 16 lbs on any dashboard texture, in any temperature. GPS stays put.</div>
+    </div>
+    <div class="uc reveal d1">
+      <span class="ui">🍳</span>
+      <div class="ut">Kitchen Backsplash</div>
+      <div class="ud">Grout lines, textured tile, painted drywall — suction needs a perfect flat seal. Gecko just needs contact area. 20 lbs on tile. Recipe videos, hands-free, no acrobatics.</div>
+    </div>
+    <div class="uc gk reveal d2">
+      <span class="ui">🏋️</span>
+      <div class="ut">Gym Equipment</div>
+      <div class="ud">Rubber, textured metal, painted steel — the unholy trinity for suction cups. Gecko-Grip holds 13 lbs on textured surfaces. Watch form videos mid-set. It's not going anywhere.</div>
+    </div>
+    <div class="uc reveal d3">
+      <span class="ui">✈️</span>
+      <div class="ut">Airplane Tray Table</div>
+      <div class="ud">Scratched, pitted plastic. Suction seals the moment it touches a scratch. Gecko doesn't seal — it contacts. 15 lbs on plastic. Hands-free movie, every flight.</div>
+    </div>
+    <div class="uc gk reveal d4">
+      <span class="ui">🪵</span>
+      <div class="ut">Wood &amp; Textured Walls</div>
+      <div class="ud">Your Octobuddy has never worked here. Gecko-Grip holds 12 lbs on wood grain. Mount to your desk surface, bedside headboard, or finished wall panel. Zero residue.</div>
+    </div>
+    <div class="uc reveal d5">
+      <span class="ui">🧱</span>
+      <div class="ut">Concrete &amp; Brick</div>
+      <div class="ud">The final boss of mounting surfaces. Nothing sticks here. Gecko-Grip: 6 lbs. That's 12× your iPhone's weight. On concrete. If your use case requires this, we're the only option.</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ═══ THE SCIENCE ═══ -->
+<section><div class="container">
+  <div class="st green reveal">THE SCIENCE</div>
+  <h2 class="reveal d1">Why suction cups work on windows.<br><em>And nowhere else.</em></h2>
+  <p class="lead reveal d2">Suction cups require atmospheric pressure differential to function. Rough surface? Pressure equalizes. Dusty surface? Seal breaks. Hot car? Rubber softens, seal fails. This isn't a product flaw — it's physics.</p>
+  <p class="reveal d3">Van der Waals adhesion is different in kind, not just degree. It operates at the molecular level: 504,000 mushroom-tip PDMS microfibers each make intimate molecular contact with a surface, creating attractive forces that don't depend on smooth geometry, sealed air chambers, or perfect conditions. The same forces hold a gecko to a ceiling at 35°C in 90% humidity. They hold your phone to a dashboard on the 405 at 2pm in August.</p>
+  <p class="reveal d3" style="text-align:center;font-family:'Instrument Serif',serif;font-size:clamp(22px,3.5vw,32px);font-style:italic;color:var(--gecko);margin:28px 0;">"No vacuum. No adhesive. Just 200 million years of R&amp;D."</p>
+
+  <div class="st green reveal" style="margin-top:60px;">5-LAYER ARCHITECTURE</div>
+  <h3 class="reveal">What's inside the 65mm disc</h3>
+  <div class="ev" id="et">
+    <div class="el"><span class="ed" style="background:#a8b0b8"></span><span class="en">Aluminum 6061-T6 Shell</span><div class="es">0.8mm · Type III hard anodize · Liquid Titanium finish</div></div>
+    <div class="el"><span class="ed" style="background:#14141c"></span><span class="en">PC/ABS Core + MagSafe Ring</span><div class="es">1.4mm · 8× N52 NdFeB magnets at 24mm radius</div></div>
+    <div class="el"><span class="ed" style="background:#3a4a5c"></span><span class="en">Silicone Gel Conformity Layer</span><div class="es">0.8mm · Shore 00-30 · Conforms to ≤500µm surface variation</div></div>
+    <div class="el"><span class="ed" style="background:var(--gecko)"></span><span class="en">PDMS Gecko Microfiber Pad</span><div class="es">0.6mm · 504,000 mushroom-tip fibers · 42,000/cm²</div></div>
+    <div class="el"><span class="ed" style="background:#666"></span><span class="en">PET Release Liner</span><div class="es">0.05mm · Protective film · Peel before first use</div></div>
+  </div>
+
+  <div class="st green reveal" style="margin-top:48px;">HOLD STRENGTH BY SURFACE</div>
+  <p class="reveal" style="font-size:12px;color:var(--dim);margin-bottom:4px;">Gecko-Grip Pro performance vs. suction cup compatibility</p>
+  <div class="sg" id="st2">
+    <div class="sc reveal"><span class="se">🪟</span><div class="sn">Glass</div><div class="sh">22 lbs</div><div class="sb"><div class="sf" data-w="100"></div></div><div class="so" style="color:var(--body);opacity:.5">Suction works here too</div></div>
+    <div class="sc reveal d1"><span class="se">🔩</span><div class="sn">Metal</div><div class="sh">21 lbs</div><div class="sb"><div class="sf" data-w="95"></div></div><div class="so" style="color:var(--body);opacity:.5">Suction: unreliable on texture</div></div>
+    <div class="sc reveal d2"><span class="se">🏠</span><div class="sn">Tile</div><div class="sh">20 lbs</div><div class="sb"><div class="sf" data-w="91"></div></div><div class="so">Suction: fails on grout</div></div>
+    <div class="sc reveal d3"><span class="se">🚗</span><div class="sn">Dashboard</div><div class="sh">16 lbs</div><div class="sb"><div class="sf" data-w="73"></div></div><div class="so">Suction: ✗ fails</div></div>
+    <div class="sc reveal d4"><span class="se">🏡</span><div class="sn">Painted Wall</div><div class="sh">15 lbs</div><div class="sb"><div class="sf" data-w="68"></div></div><div class="so">Suction: ✗ fails</div></div>
+    <div class="sc reveal d5"><span class="se">🪵</span><div class="sn">Wood</div><div class="sh">12 lbs</div><div class="sb"><div class="sf" data-w="55"></div></div><div class="so">Suction: ✗ fails</div></div>
+    <div class="sc reveal d3"><span class="se">🧱</span><div class="sn">Concrete</div><div class="sh">6 lbs</div><div class="sb"><div class="sf" data-w="27"></div></div><div class="so">Suction: not a chance</div></div>
+    <div class="sc reveal d4"><span class="se">🧹</span><div class="sn">Residue</div><div class="sh" style="font-size:14px">Zero.</div><div class="sb"><div class="sf" data-w="100" style="background:var(--gold-g)"></div></div><div class="so" style="color:var(--gold)">Suction: pressure rings remain</div></div>
+  </div>
+
+  <div class="gd reveal" style="margin-top:48px;">
+    <div class="gq">"The Octobuddy works on the surfaces you'd film yourself on anyway. We work on the surfaces you actually go to. Bold of them to call smooth glass 'anywhere.' Very bold."</div>
+    <div class="ga">— Gary, who has been to a car dashboard</div>
+  </div>
+</div></section>
+
+<div class="sep"></div>
+
+<!-- ═══ POWERCLIP PRO ═══ -->
+<section><div class="container">
+  <div class="st gold reveal">POWERCLIP PRO WR6.2</div>
+  <h2 class="reveal d1">Seven Features. <em>One Case.</em></h2>
+  <p class="lead reveal d2">Gecko-Grip Pro is a standalone product. But inside the PowerClip Pro ecosystem, it becomes one piece of a seven-feature system that replaces your ring stand, MagSafe puck, charging cable, phone leash, car mount, lens protector, and excuses.</p>
+  <div class="ug">
+    <div class="uc reveal"><span class="ui">🔄</span><div class="ut">360° Ring Stand</div><div class="ud">Full rotation, 0–180° tilt. Dual-bearing hinge. CNC 304 stainless steel. Recessed flush when stored.</div></div>
+    <div class="uc reveal d1"><span class="ui">⚡</span><div class="ut">MagSafe 15W</div><div class="ud">Extruded N52 puck. Copper triple-coil. Full pass-through to external MagSafe chargers.</div></div>
+    <div class="uc reveal d2"><span class="ui">🔌</span><div class="ut">USB-C 27W PD 3.0</div><div class="ud">Side-mounted, gold-plated contacts. Full data + power pass-through the case wall.</div></div>
+    <div class="uc reveal d3"><span class="ui">🪢</span><div class="ut">800mm Kevlar Leash</div><div class="ud">Spring-loaded retractable reel. Dual-stage lock. AirTag pocket. CNC titanium carabiner.</div></div>
+    <div class="uc reveal d4"><span class="ui">💎</span><div class="ut">Sapphire Lens Covers</div><div class="ud">9H hardness crystal. AR coating. Aluminum bezels. Zero optical interference.</div></div>
+    <div class="uc reveal d5"><span class="ui">💧</span><div class="ut">IP68 Sealed</div><div class="ud">Silicone gasket sealing. 6m depth, 30 minutes. Rain, splashes, full submersion.</div></div>
+  </div>
+</div></section>
+
+<!-- ═══ GECKO CINEMATIC UNIVERSE ═══ -->
+<section style="background:var(--surf);border-top:1px solid var(--border);border-bottom:1px solid var(--border);"><div class="container">
+  <div class="st green reveal">🎬 THE GECKO CINEMATIC UNIVERSE</div>
+  <h2 class="reveal d1">Campaign Video <em>Concepts</em></h2>
+  <p class="reveal d2" style="color:var(--body)">A gecko who cannot believe someone commercialized his family's technology. Delivering product comparisons through dry comedy.</p>
+
+  <div class="sp reveal">
+    <div class="sph"><div class="spn">1</div><div><div class="spt">"15 Minutes Could Save You 15 Phones"</div><div class="sptg">Hero Launch · 90 seconds</div></div></div>
+    <div class="spb">
+      <span class="dir">[A tiny gecko in a hard hat. Behind him: an iPhone on brick wall, held by an Octobuddy. Slowly sliding down.]</span>
+      <span class="gv">GARY: "Suction cups. Phenomenal concept. Very 1987. Great for bathroom mirrors. That's about it."</span>
+      <span class="dir">[Phone crashes to floor. Gary does not flinch.]</span>
+      <span class="gv">GARY: "My family's been sticking to things for 200 million years. Without suction. Without glue. Without a single smooth surface required."</span>
+      <span class="dir">[Gecko-Grip Pro snaps onto PowerClip Pro. SATISFYING magnetic click. MONTAGE: brick, dashboard, gym rubber, airplane tray, wood headboard.]</span>
+      <span class="gv">GARY: "504,000 contact points. Eight surfaces. Zero residue. The Octobuddy works where you already have glass. We work everywhere else. That's the whole thing."</span>
+      <span class="dir">[Beat.]</span>
+      <span class="gv">GARY: "Also we didn't use permanent adhesive. Thought that was worth mentioning."</span>
+    </div>
+  </div>
+
+  <div class="sp reveal">
+    <div class="sph"><div class="spn">2</div><div><div class="spt">"The Upgrade"</div><div class="sptg">Social · 30s · TikTok/Reels</div></div></div>
+    <div class="spb">
+      <span class="dir">[Side-by-side. Left: Octobuddy on car dashboard. Slowly sliding. Right: Gecko-Grip on same dashboard. Motionless.]</span>
+      <span class="gv">GARY (V.O.): "One uses 24 suction cups. One uses 504,000 molecular contact points."</span>
+      <span class="dir">[Left phone hits the floor. Right phone has not moved.]</span>
+      <span class="gv">GARY (V.O.): "One costs $19 and needs glass. One costs $29 and doesn't need anything in particular."</span>
+      <span class="dir">[Cut to Gary, tiny arms crossed.]</span>
+      <span class="gv">GARY: "I'm not saying it's not a competition. I am saying one of us is losing."</span>
+    </div>
+  </div>
+
+  <div class="sp reveal">
+    <div class="sph"><div class="spn">3</div><div><div class="spt">"The Unboxing Nobody Asked For"</div><div class="sptg">YouTube · 3 minutes</div></div></div>
+    <div class="spb">
+      <span class="dir">[Gary in tiny reading glasses, miniature ring light, microscopic camera setup.]</span>
+      <span class="gv">GARY: "What's up everyone. Today we're reviewing something I have mixed feelings about. They named it after my species. Did not ask. Did not send a review unit."</span>
+      <span class="dir">[Compares Gecko-Grip Pro and Octobuddy side by side on tiny desk.]</span>
+      <span class="gv">GARY: "This one: adhesive backing, permanent, 24 cups, smooth surfaces only. This one: MagSafe, detachable, 504,000 fibers, eight surfaces. Similar concept. Very different execution."</span>
+      <span class="dir">[Sticks Gecko-Grip to a car dashboard. Holds. Tries to look unimpressed. Clearly impressed.]</span>
+      <span class="gv">GARY: "...five out of five gecko toes. I want royalties but I'm giving five toes."</span>
+    </div>
+  </div>
+
+  <div class="gd reveal">
+    <div class="gq">"They have 24 suction cups and I have 504,000 contact points. I've been in PR for 200 million years and even I know which number wins."</div>
+    <div class="ga">— Gary, on the importance of spec sheets</div>
+  </div>
+</div></section>
+
+<!-- ═══ TIERS ═══ -->
+<div class="ts" id="tiers"><div class="container">
+  <div class="st gold reveal">BACK THIS PROJECT</div>
+  <h2 class="reveal d1">Choose Your <em>Configuration</em></h2>
+  <p class="reveal d2" style="color:var(--body)">From standalone gecko pad to the full ecosystem. Free shipping. Thank-you card from Gary (unsigned — still in contract negotiations).</p>
+  <div class="tg">
+
+    <div class="ti founder reveal">
+      <div class="tt">🔥 FOUNDER — 50 UNITS</div>
+      <div class="tn">Full Ecosystem T7</div>
+      <div class="tp"><span class="go">$79</span></div>
+      <div class="tw">$267 separate</div>
+      <div class="td">Every feature. Founding-backer pricing. This tier disappears in hours, not days.</div>
+      <div class="tm">1× PowerClip Pro T7 (all 7 features)</div>
+      <div class="tm">1× Gecko-Grip Pro pad</div>
+      <div class="tm">All cables + accessories</div>
+      <div class="tv">Save 70% — 50 units, gone fast</div>
+    </div>
+
+    <div class="ti gt reveal d1">
+      <div class="tt">🦎 GECKO EARLY BIRD</div>
+      <div class="tn">Gecko-Grip Pro</div>
+      <div class="tp"><span class="ge">$29</span></div>
+      <div class="tw">$49 MSRP</div>
+      <div class="td">The Octobuddy upgrade. Any MagSafe case. 8 surfaces. Zero residue.</div>
+      <div class="tm">1× Gecko-Grip Pro pad</div>
+      <div class="tm">3M VHB backup ring + gift box</div>
+      <div class="tv">Save 41% — Limited 200</div>
+    </div>
+
+    <div class="ti reveal d2">
+      <div class="tt">⚡ CASE EARLY BIRD</div>
+      <div class="tn">PowerClip Pro T3</div>
+      <div class="tp"><span class="go">$129</span></div>
+      <div class="tw">$169</div>
+      <div class="td">Ring + Suction + MagSafe + USB-C + Leash + AirTag + Sapphire. IP68.</div>
+      <div class="tm">1× PowerClip Pro Full (T3)</div>
+      <div class="tm">USB-C cable + AirTag pocket</div>
+      <div class="tv">Save 24% — 500 units</div>
+    </div>
+
+    <div class="ti gt hot reveal d1">
+      <div class="tt">📦 ECOSYSTEM BUNDLE</div>
+      <div class="tn">Case + Gecko (T6)</div>
+      <div class="tp"><span class="ge">$149</span></div>
+      <div class="tw">$218 separate</div>
+      <div class="td">The complete mount-anywhere system. Suction + gecko + leash + full case.</div>
+      <div class="tm">1× PowerClip Pro T6</div>
+      <div class="tm">1× Gecko-Grip Pro pad</div>
+      <div class="tm">All cables + accessories</div>
+      <div class="tv">Save 32% — Limited 500</div>
+    </div>
+
+    <div class="ti gt reveal d2">
+      <div class="tt">📦 FULL ECOSYSTEM</div>
+      <div class="tn">Everything (T7)</div>
+      <div class="tp"><span class="ge">$169</span></div>
+      <div class="tw">$267 separate</div>
+      <div class="td">All 7 features + 2× Gecko pads. Desk + car + everywhere else.</div>
+      <div class="tm">1× PowerClip Pro T7</div>
+      <div class="tm">2× Gecko-Grip Pro pads</div>
+      <div class="tm">All cables + accessories</div>
+      <div class="tv">Save 37% — The whole enchilada</div>
+    </div>
+
+    <div class="ti reveal d3">
+      <div class="tt">🏪 RETAILER</div>
+      <div class="tn">10-Pack</div>
+      <div class="tp"><span class="go">$1,490</span></div>
+      <div class="tw">$2,180</div>
+      <div class="td">10 ecosystem bundles. B2B pricing.</div>
+      <div class="tm">10× PowerClip T6 + 10× Gecko</div>
+      <div class="tv">Save 32% — Limited</div>
+    </div>
+
+  </div>
+</div></div>
+
+<!-- ═══ STRETCH GOALS ═══ -->
+<section><div class="container">
+  <div class="st gold reveal">STRETCH GOALS</div>
+  <h2 class="reveal d1">The More We Raise, <em>The More You Get</em></h2>
+  <div id="strt">
+    <div class="str reveal"><div class="stra">$75K</div><div class="strb"><div class="strf" data-w="100"></div></div><div class="strl">✅ PowerClip Pro + Gecko-Grip ships</div></div>
+    <div class="str reveal d1"><div class="stra">$100K</div><div class="strb"><div class="strf" data-w="0"></div></div><div class="strl">Colors: Midnight Blue, Forest Green</div></div>
+    <div class="str reveal d2"><div class="stra">$125K</div><div class="strb"><div class="strf" data-w="0"></div></div><div class="strl">🦎 Gecko-Grip Pro standalone launch</div></div>
+    <div class="str reveal d3"><div class="stra">$150K</div><div class="strb"><div class="strf" data-w="0"></div></div><div class="strl">MagSafe precision charging dock</div></div>
+    <div class="str reveal d4"><div class="stra">$200K</div><div class="strb"><div class="strf" data-w="0"></div></div><div class="strl">Titanium Ring Stand upgrade option</div></div>
+    <div class="str reveal d5"><div class="stra">$250K</div><div class="strb"><div class="strf" data-w="0"></div></div><div class="strl">🦎 Gecko colors: Obsidian, Arctic, Copper</div></div>
+    <div class="str reveal"><div class="stra">$300K</div><div class="strb"><div class="strf" data-w="0"></div></div><div class="strl">Battery variant — slim 2,500mAh USB-C</div></div>
+    <div class="str reveal d1"><div class="stra">$400K</div><div class="strb"><div class="strf" data-w="0"></div></div><div class="strl">iPad Pro Gecko-Grip development</div></div>
+  </div>
+</div></section>
+
+<!-- ═══ FAQ ═══ -->
+<section><div class="container">
+  <div class="st blue reveal">FAQ</div>
+  <h2 class="reveal d1">Questions &amp; <em>Answers</em></h2>
+
+  <div class="fq reveal" onclick="this.classList.toggle('open')">
+    <div class="fqq">How is this different from Octobuddy?</div>
+    <div class="fqa">Octobuddy uses 24 silicone suction cups with permanent peel-and-stick adhesive backing. It works on smooth surfaces — mirrors, glass, clean tile. That's roughly 3 of the 8 common surfaces you encounter. Gecko-Grip Pro uses 504,000 PDMS biomimetic microfibers operating via Van der Waals forces — the same mechanism real gecko feet use. It works on 8 surface types including dashboards, textured walls, wood, and concrete. It's MagSafe-detachable (not permanent), self-cleaning, and rated for 80,000+ cycles. Same concept, fundamentally different technology, $10 more.</div>
+  </div>
+
+  <div class="fq reveal d1" onclick="this.classList.toggle('open')">
+    <div class="fqq">Is this actually gecko technology?</div>
+    <div class="fqa">Yes. Synthetic PDMS microfibers replicating gecko foot spatulae. Van der Waals adhesion mechanism published in PNAS 2000 by Autumn &amp; Full at UC Berkeley. The same class of technology has since been adopted in semiconductor handling (Samsung, TSMC, Intel), aerospace (NASA), and automotive (Ford). We scale it for consumer phone mounting.</div>
+  </div>
+
+  <div class="fq reveal d2" onclick="this.classList.toggle('open')">
+    <div class="fqq">How strong is the hold? Will my phone fall?</div>
+    <div class="fqa">22 lbs on glass. Your iPhone 16 Pro Max weighs 0.50 lbs. That's a 44× safety factor. On your car dashboard (16 lbs), you have a 32× margin. Even on concrete — the hardest surface — 6 lbs gives you a 12× margin. Note: these are engineering projections based on fiber density calculations. Physical prototype validation is underway before final marketing claims are locked.</div>
+  </div>
+
+  <div class="fq reveal d3" onclick="this.classList.toggle('open')">
+    <div class="fqq">Does it leave residue? My landlord already hates me.</div>
+    <div class="fqa">Zero. Van der Waals is a physical intermolecular force, not a chemical bond. Nothing is transferred to the surface. Peel it off, the wall looks exactly as it did before. This is why it also self-cleans — rinse under running water and the fibers reset. No adhesive to reapply.</div>
+  </div>
+
+  <div class="fq reveal d4" onclick="this.classList.toggle('open')">
+    <div class="fqq">Do I need the PowerClip case for Gecko-Grip?</div>
+    <div class="fqa">No. Gecko-Grip Pro is MagSafe-compatible and works with any MagSafe device or case. It's a standalone product at $29 early bird. That said, the $149 Ecosystem Bundle pairs it with the PowerClip Pro case for a 32% savings and gives you the full 7-feature experience.</div>
+  </div>
+
+  <div class="fq reveal d5" onclick="this.classList.toggle('open')">
+    <div class="fqq">How long does the gecko pad last?</div>
+    <div class="fqa">80,000+ attachment cycles. At 20 mounts per day, that's 10+ years of daily use. When adhesion feels reduced, rinse under running water for 30 seconds. Full grip restored. No replacement pads. No consumables.</div>
+  </div>
+
+  <div class="fq reveal" onclick="this.classList.toggle('open')">
+    <div class="fqq">When does it ship?</div>
+    <div class="fqa">Manufactured by New Ideas Manufacturing in Denver, CO. Early bird backers: Q2 2026. Standard tier: Q3 2026. We build in buffer for hardware. These are targets, not guarantees — hardware campaigns have real timelines and we won't ship until it's right.</div>
+  </div>
+
+  <div class="fq reveal d1" onclick="this.classList.toggle('open')">
+    <div class="fqq">What's the warranty?</div>
+    <div class="fqa">1-year manufacturer's warranty covering defects in materials and workmanship. The gecko pad has an expected service life of 10+ years under normal use. If adhesion decreases before that, rinse it first. If that doesn't fix it, we will.</div>
+  </div>
+</div></section>
+
+<!-- ═══ FINAL CTA ═══ -->
+<div class="cs">
+  <div class="st green reveal">THE FUTURE OF PHONE MOUNTING</div>
+  <h2 class="reveal d1" style="margin-bottom:8px">Mount Everywhere.<br><em>Drop Nothing.</em></h2>
+  <p class="reveal d2" style="max-width:580px;margin:0 auto 36px;color:var(--body)">200 million years of evolution. 504,000 microfibers. 8 surface types. The only phone mount your suction cup couldn't replace.</p>
+  <div class="reveal d3">
+    <button class="cb cb1" onclick="document.getElementById('tiers').scrollIntoView({behavior:'smooth'})">Back This Project →</button>
+    <button class="cb cb2" onclick="document.getElementById('tiers').scrollIntoView({behavior:'smooth'})">🦎 Just the Pad — $29</button>
+  </div>
+  <div class="reveal d4">
+    <button class="cb3" onclick="document.querySelector('.embed-3d').scrollIntoView({behavior:'smooth'})">Explore 3D Configurator →</button>
+  </div>
+  <div class="gd reveal d5" style="max-width:600px;margin:48px auto 0;text-align:left">
+    <div class="gq">"They asked how I feel about a $29 product replacing a $19 product. I said: I feel the way the iPhone felt about the BlackBerry. Philosophical. Inevitable. Not sorry."</div>
+    <div class="ga">— Gary, on market disruption</div>
+  </div>
+</div>
+
+<footer><div class="container">PowerClip Pro + Gecko-Grip Pro · GREYSHINE · New Ideas Manufacturing, Denver CO<br><span style="color:var(--gecko)">No Octobuddies were harmed. They just have fewer surfaces now.</span></div></footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const eo=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.querySelectorAll('.el').forEach((l,i)=>{setTimeout(()=>l.classList.add('vis'),i*120)})})},{threshold:.3});
+const et=document.getElementById('et');if(et)eo.observe(et);
+const so=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.querySelectorAll('.sf').forEach(b=>{b.style.width=b.dataset.w+'%'})})},{threshold:.2});
+const st2=document.getElementById('st2');if(st2)so.observe(st2);
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.querySelectorAll('.strf').forEach(b=>{b.style.width=b.dataset.w+'%'})})},{threshold:.2});
+const strt=document.getElementById('strt');if(strt)ro.observe(strt);
+window.addEventListener('scroll',()=>{document.getElementById('pb').style.width=Math.min(100,(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100)+'%'});
+document.querySelectorAll('.sf').forEach(b=>b.style.width='0%');
+</script>
+</body></html>
